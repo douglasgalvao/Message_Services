@@ -18,11 +18,4 @@ public class EstoqueConsumer {
     }
 
 
-    @RabbitListener(queues = RabbitMQConstants.FILA_PRECO)
-    private void consumer(PrecoDTO precoDTO){
-        System.out.println(precoDTO.codigoProduto);
-        System.out.println(precoDTO.preco);
-        System.out.println("-------------------");
-    }
-
 }
