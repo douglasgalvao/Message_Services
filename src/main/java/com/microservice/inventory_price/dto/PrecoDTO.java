@@ -4,5 +4,5 @@ import java.io.Serializable;
 
 public class PrecoDTO implements Serializable {
     public String codigoProduto;
-    public String quantidade;
+    public Double preco;
 }

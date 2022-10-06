@@ -1,6 +1,11 @@
 package com.microservice.inventory_price.dto;
 
-import java.io.Serializable;
+import org.springframework.stereotype.Component;
 
-public class Estoque implements Serializable {
+import java.io.Serializable;
+@Component
+public class EstoqueDTO implements Serializable {
+    public String codigoProduto;
+    public String quantidade;
+
 }
