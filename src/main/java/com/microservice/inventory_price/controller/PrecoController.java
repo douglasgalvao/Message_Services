@@ -17,7 +17,6 @@ public class PrecoController {
 
     @PostMapping
     private ResponseEntity alteraPreco(@RequestBody PrecoDTO precoDTO){
-        System.out.println(precoDTO.codigoProduto);
         this.rabbitmqService.enviaMensagem(RabbitMQConstants.FILA_PRECO,precoDTO);
         return new ResponseEntity(HttpStatus.OK);
     }

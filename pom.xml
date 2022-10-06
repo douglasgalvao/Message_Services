@@ -35,6 +35,7 @@
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -20,7 +20,6 @@ public class EstoqueController {
 
     @PostMapping
     private ResponseEntity alteraEstoque(@RequestBody EstoqueDTO estoqueDTO){
-        System.out.println(estoqueDTO.codigoProduto);
         this.rabbitmqService.enviaMensagem(RabbitMQConstants.FILA_ESTOQUE,estoqueDTO);
         return new ResponseEntity(HttpStatus.OK);
     }
