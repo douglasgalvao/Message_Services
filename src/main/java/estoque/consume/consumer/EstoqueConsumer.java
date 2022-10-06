@@ -17,5 +17,5 @@ public class EstoqueConsumer {
         System.out.println("-------------------");
     }
 
-
+//
 }
