@@ -13,3 +13,5 @@ public class RabbitmqService {
         this.rabbitTemplate.convertAndSend(nomeFila, mensagem);
     }
 }
+
+//
