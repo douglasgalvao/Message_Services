@@ -1,7 +1,8 @@
 package com.microservice.inventory_price.controller;
 
-import com.microservice.inventory_price.dto.EstoqueDTO;
+import com.microservice.inventory_price.constants.RabbitMQConstants;
 import com.microservice.inventory_price.service.RabbitmqService;
+import dto.EstoqueDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class EstoqueController {
     @PostMapping
     private ResponseEntity alteraEstoque(@RequestBody EstoqueDTO estoqueDTO){
         System.out.println(estoqueDTO.codigoProduto);
-        this.rabbitmqService.enviaMensagem(com.microservice.inventory_price.constants.RabbitMQConstants.FILA_ESTOQUE,estoqueDTO);
+        this.rabbitmqService.enviaMensagem(RabbitMQConstants.FILA_ESTOQUE,estoqueDTO);
         return new ResponseEntity(HttpStatus.OK);
     }
 }

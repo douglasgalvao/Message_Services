@@ -1,7 +1,7 @@
 package com.microservice.inventory_price.controller;
 import com.microservice.inventory_price.constants.RabbitMQConstants;
-import com.microservice.inventory_price.dto.PrecoDTO;
 import com.microservice.inventory_price.service.RabbitmqService;
+import dto.PrecoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
